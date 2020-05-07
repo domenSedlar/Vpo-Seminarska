@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri v vrsto</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+
+</head>
+
+<body>
+    <div style="background-color: blue;">
+        <h1>Funkcija ai</h1>  
+    </div> 
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dom</a>
+        <a href="proces.html">Proces izdelave</a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Pomembne funkcije</b>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="ai.html" class="active">ai</a>
+                <a href="win.html">win</a>
+                <a href="pressed.html">pressed</a>
+            </div>
+        </div>
+        <a href="zacni.html">Zacetek igre</a>
+        <a href="vnasanje.html">Vnasanje ukazov</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+    
+    <table>
+        <tr>
+            <td>
+                <h2>Namen</h2>
+                je zadolzena, da postavlja krogce na dobra mesta. To naredi v dveh fazah. Prvo preveri igralno mrezo, ce je kje nujno, da postavi krogec, v drugi fazi pa izbere mesto, kamor ga postavi.
+            </td>
+            <td>
+                <img src="ai/bot.jpg" alt="robot igra sah s clovekom">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Kako preveri igralno mrezo?</h2>
+                <h3>Vrstice in stolpci</h3>
+                <div class="podpodnaslov">
+                    Ce hoces preveriti koliko krogcov in krizcev ima vrstica v seznamu lines, spreminjas samo drugo pozicijsko stevilo. npr:
+                    lines = [[x,x,x],[o,-,x],[o,-,o]] zato za pregled vseh vrednosti v prvi     vrstici lines[0][a]. Za stolpce je pa ravno obratno in je za prvi stolpec potrebno pregledati lines[a][0]. <br> <br> 
+                    Za pregled stolpcev je ena zanka, ki se trikrat ponovi in spremeni stevilo vrstice in stolpca in znotraj te zanke je en for loop za vrstice, ki ce so v vrstici dva enaka znaka brez nobenega drugega znaka  konca vse zanke in poskrbi, da je v tej vrstici krogec, za stolpce je pa se ena dokler zanka, ki spreminja prvo pozicijsko stevilo, deluje pa enako kot prvi for loop.
+                </div>
+           </td>
+            <td>
+                <div class="trivv">
+                    <table>
+                        <tr>
+                            <td>00</td>
+                            <td>01</td>
+                            <td>02</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>Vertikalno</h3>
+                <div class="podpodnaslov">
+                    Pri vertikalnem nisem nasel nobenega uporabnega zaporedja in je bilo manj dela samo napisati ce stavke, ki so pregledovali, ce so dva enaka znaka sama kje. Ce najde, se to shrani v spremenljivko v kateri pise, v katerem kotu se zacne vertikalna crta.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="ai/pregleduje_vrstice.png" alt="koda" class="koda">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h2>Postavitev krogca</h2>
+                Na zacetku je ce stavek. Ce se je pri pregledu igralne mreze odkrilo kaj zanimivega je v to vrstico,stolpec... postavilo krogec, drugace se je pa zacel else stavek, ki je postavil krogec nekam drugam.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h3>Ce je naslo kaj</h3>
+                <div class="podpodnaslov">
+                   
+                    Potem so tri ce stavki, ki preverijo, ce je potrebno postaviti kroge v stolpec, vrstico ali postrani. Ce ga je potrebno postaviti v stolpec ali vrstico z zanko, najde prazno mesto in ga  tam postavi. Ce pa je postrani, pa s tremi ce stavki najde prazno mesto in tam postavi krogec. 
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Else:</h3>
+                <div class="podpodnaslov">
+                    V tri v vrsto so koti najboljsa pozicija za postavitev, zato sem naredil  seznam z dvema stevilkama 0 inn 2 potem pa dva for loopa eden v drugem, da sem dobil vse mozne kombinacije teh stevk. (1 je vedno v sredini vrstice, stolpca). Potem preveri, ce je kot prost in ce je se izvede se en ce stavek, ki preveri, da ni naljucna vrednost od 0 do 2 1 in ce je res postavi v tisto pozicijo svoj znak. <br> <br>
+                    Mozno je tudi, da ni krogec postavljen v noben kot in zato imam se en seznam z vrednostmi 0, 1, 2 s katerim lahko s pomocjo for loopov dobim vse mozne kombinacije. Potem preveri, ce je mesto prosto in s pomocjo ranint(0,4) izbere malo nakljucno pozicijo.
+                </div>
+            </td>
+            <td rowspan="2">
+                <img src="ai/kot.png" alt="koda" class="koda">
+                <p style="text-align-last: center">k in m sta vrednosti ki ju funkcija vrne</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Konec</h2>
+                ko funkcija postavi kamorkoli krogec, shrani vrednost, od katere lahko dobimo pozicijo od novonastalega krogca, ki jo na koncu vrne.
+            </td>
+        </tr>
+    </table>
+    
+    
+</body>
+</html>
+

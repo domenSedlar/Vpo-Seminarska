@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri v vrsto</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+</head>
+
+<body>
+    <div style="background-color: blue; position: ">
+        <h1>Funkcija win</h1>  
+    </div> 
+   
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dom</a>
+        <a href="proces.html">Proces izdelave</a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Pomembne funkcije</b>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="ai.html">ai</a>
+                <a href="win.html" class="active">win</a>
+                <a href="pressed.html">pressed</a>
+            </div>
+        </div>
+        <a href="zacni.html">Zacetek igre</a>
+        <a href="vnasanje.html">Vnasanje ukazov</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+    
+    <table>
+        <tr>
+            <td style="padding: 50px">
+                <h2>Namen</h2>
+                Funkcija win je zadolzena za pregled igralne mreze, da se izve, ce je igra koncana, kdo je zmagal in da poklice winline, ki nam prikaze, kje so tri enaki znaki povrsti.
+            </td>
+            <td style="padding: 50px">
+                <table width="150px" height="150px" style=" text-align: center">
+                    <tr>
+                        <td style="border-style: solid; color: white; background-color: blue; border-color: black;">X</td>
+                        <td style="border-style: solid; color: black;"></td>
+                        <td style="border-style: solid; color: black;">O</td>
+                    </tr>
+                    <tr>
+                        <td style="border-style: solid; color: black;">O</td>
+                        <td style="border-style: solid; color: white; border-color: black; background-color: blue;">X</td>
+                        <td style="border-style: solid; color: black;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-style: solid; color: black;">X</td>
+                        <td style="border-style: solid; color: black;">O</td>
+                        <td style="border-style: solid; color: white; border-color: black; background-color: blue">X</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 50px">
+                <h2>Kako deluje</h2>
+                Najprej pokliče funkcijo win v trivv datoteki (vse vrstice/stolpce in po verikali pregleduje na skoraj enak nacin kot funkcija ai, zato tega ne bom dvakrat pisal) in jo vprasa, ce je igre konec, ce ni konec se funkcija konca in vrne vrednost True. Ce pa je konec, se enkrat pozove to funkcijo in jo vprasa kdo je zmagal. to informacijo potem posreduje funkciji konc iz druge datoteke, ki potem naredi okno, ki igralcu pove, kdo je zmagal. <br> <br>
+                Poklice tudi funkcijo winline, ki vprasa funkcijo win iz druge datoteke, kje so tri znaki v vrsti. Ta informacija je shranjena z dvema znakoma, prvi nam pove v kaksni poziciji so znaki, ce so postrani, v vrsti, ali stolpcu. Druga pa pove v kateri vrsti/stolpcu so. <br>
+                Ko izve kje so, pobarva gumbe na modro. 
+            </td>
+            <td>
+                <img src="win/win.png" alt="koda" class="koda">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

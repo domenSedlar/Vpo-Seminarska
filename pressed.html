@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri v vrsto</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+
+</head>
+
+<body>
+    <div style="background-color: blue;">
+        <h1>Funkcija pressed</h1>  
+    </div> 
+
+   
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dom</a>
+        <a href="proces.html">Proces izdelave</a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Pomembne funkcije</b>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="ai.html">ai</a>
+                <a href="win.html">win</a>
+                <a href="pressed.html" class="active">pressed</a>
+            </div>
+        </div>
+        <a href="zacni.html">Zacetek igre</a>
+        <a href="vnasanje.html">Vnasanje ukazov</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+    
+    <table>
+        <tr>
+            <td>
+                <h2>Namen</h2>
+                Funkcija pressed se izvede, ko nekdo pritisne kateri koli gumb na igralni povrsini. Ta funkcija uskladi podatke o igralni površini v obeh datotekah in odigra računalnikov premik s pomočjo funkcije ai iz druge datoteke.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Kako deluje</h2>
+                <ol>
+                    <li>Gumb je pritisnjen, kar povzroči, da se izvede njegova funkcija, temu gumbu se spremeni znak, ter se ga izklopi,</li>
+                    <li>potem gumbova funkcija poklice funkcijo pressed, ter ji sporoci pozicijo gumba,</li>
+                    <li>pressed poklice funkcijo  <a href="vnasanje.html">you</a>  iz druge datoteke, ki zapise podatek v svoj seznam. Funkcija you tudi preveri, ce je mesto prosto, ampak je sedaj to neuporabno, saj ne moremo klikniti na ze uporabljen gumb,</li>
+                    <li>z funkcijo <a href="win.html">win</a> izvemo, ce se igra nadaljuje in ce se, se  izvede zanka, ki pregleda, ce je se kaksno mesto prosto,</li>
+                    <li>ce je kaksno mesto prosto, se izvede funkcija ai iz druge datoteke, ki je <a href="ai.html">tukaj</a> boljse opisana,</li>
+                    <li>z informacijami, ki jih je funkcija ai vrnila, spremenimo znak, ter stanje gumba in koncamo zanko z se enim pregledom, ce se je igra koncala. </li>
+                </ol>
+            </td>
+            <td>
+                <img src="pressed2.0.png" alt="koda" class="koda" style="width: 90%;">
+            </td>
+        </tr>
+    </table>
+    
+    
+</body>
+</html>
+

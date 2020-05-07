@@ -1,0 +1,72 @@
+
+body {
+    font-size: 18px;
+    font-family: Arial, Helvetica, serif;
+    padding: 20px;
+    padding-right: 0px;
+
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    padding: 20px;
+}
+
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: blue;
+    font-family: Arial, Helvetica, serif;
+    font-size: 40px;
+}
+
+h3 {
+    color: blue;
+    font-family: Arial, Helvetica, serif;
+    font-size: 25px;
+    padding-left: 25px;
+}
+
+li {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+.podpodnaslov {
+    padding-left: 55px;
+}
+
+h4 {
+    color: blue;
+    font-family: Arial, Helvetica, serif;
+    font-size: 25px;
+}
+
+a {
+    color: blue;
+    font-weight: 700;
+}
+
+div.trivv table,
+div.trivv td {
+    border-style: solid;
+    border-collapse: collapse;
+    border-color: blue
+}
+
+.koda {
+    border-style:groove;
+    border-width: 20px;
+}
+
+.border {
+    border-style: solid;
+    border-color: blue;
+}

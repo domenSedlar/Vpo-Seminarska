@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri v vrsto</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+
+    
+</head>
+
+<body>
+    <div style="background-color: blue;">
+        <h1>Zacetek</h1>
+    </div> 
+        
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Dom</a>
+        <a href="proces.html">Proces izdelave</a>
+        <div class="dropdown">
+            <button class="dropbtn"><b>Pomembne funkcije</b>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="ai.html">ai</a>
+                <a href="win.html">win</a>
+                <a href="pressed.html">pressed</a>
+            </div>
+        </div>
+        <a href="zacni.html" class="active">Zacetek igre</a>
+        <a href="vnasanje.html">Vnasanje ukazov</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <p>
+        Vsakic ko se mora igra na novo zacet, se izvede funkcija zacni, ki se izvede, ko uporabnik klikne na zgornji gumb start. Za ponastavitev programa se po zaporedju uporabijo te funkcije.
+    </p>
+    <table>
+        <tr>
+            <td>
+                 <ol>
+                    <li>zacni</li>
+                    <li>restart</li>
+                    <li>ti ali jaz</li>
+                </ol>
+            </td>
+            <td>
+                <img src="Zacetek/kdo_naj_zacne.png" alt="(kdo naj zacne: jaz, program) okno">
+            </td>
+        </tr>
+    </table>
+   
+    
+
+    <table>
+        <tr>
+            <td>
+                <h2>Zacni</h2>
+                Ko je kliknjen gumb, je najprej pozvana funkcija restart, po tem pa nastane novo okno z napisom kdo naj zacne in dvemi gumbi jaz ali ti. Oba gumba unicita okno, funkcija ti pa se odigra prvi krog na enak nacin kot funkcija <a href="pressed.html">pressed</a>. V igralni mrezi sem z grid postavil gumbe v mrezo, sedaj sem pa uporabil pack. Potrebuje manj atributov in je dober nacin, da vse napise in gumbe postavi eden zraven drugega, kar sem hotel.
+            </td>
+            <td>
+                <img src="Zacetek/start.png" alt="gumb start" class="border">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Funkcija restart</h2>
+                Pred zacetkom zanke sem naredil spremenljivko a, z vrednostjo -1. Za tem pa zanko, ki je tekla dokler ni a bil 2. V tej zanki sem naredil spremenljivko b z vrednostjo tudi -1 in spremenljivki a dodal 1. Temu sledi se ena zanka, ki se ponavlja dokler b ni 2. V zanki najprej b-ju dodam 1, potem pa vrednost na poziciji a,b v seznamih buttons in lines, ki je v drugi datoteki, spremeni na zacetni polozaj.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="Zacetek/restart.png" alt="koda" class="koda">
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
